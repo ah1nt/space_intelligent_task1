@@ -19,16 +19,7 @@
   - 最终静态图与视频
   - 模型权重清单
 
-## 外部链接
 
-- GitHub Repository：
-  `TODO_GITHUB_REPOSITORY_LINK`
-- Model Weights：
-  `TODO_MODEL_WEIGHTS_LINK`
-- Access Code：
-  `TODO_ACCESS_CODE_IF_NEEDED`
-
-以上链接需在公开提交前由你本人回填为真实可访问地址。
 
 ## 仓库结构
 
@@ -101,7 +92,7 @@ conda activate space_intelligent_submission
 - `threestudio`
 - `COLMAP`
 
-当前本地配置参考 [pipeline.json](file:///D:/space_intelligent/configs/pipeline.json)：
+当前本地配置参考 [pipeline.json]
 
 - `tools.python`
 - `tools.ffmpeg`
@@ -126,7 +117,6 @@ conda activate space_intelligent_submission
 
 - 输入方式：
   文本 Prompt
-- 当前 Prompt 定义在 [pipeline.json](file:///D:/space_intelligent/configs/pipeline.json#L24-L42) 的 `object_b.prompt`
 
 ### 3. 物体 C
 
@@ -239,44 +229,9 @@ python scripts/export_submission_curves.py
 - [build_final_submission_scene.py](file:///D:/space_intelligent/workspace/blender_stage/build_final_submission_scene.py)
 - [render_submission_preview.py](file:///D:/space_intelligent/workspace/blender_stage/render_submission_preview.py)
 
-## 测试与结果检查
-
-### 1. 场景结果
-
-- 最终 `.blend`：
-  [scene_submission_final.blend](file:///D:/space_intelligent/workspace/blender_stage/scene_submission_final.blend)
-- 最终静态图：
-  [scene_submission_final.png](file:///D:/space_intelligent/workspace/blender_stage/scene_submission_final.png)
-- 最终视频：
-  [scene_submission_final_preview.mp4](file:///D:/space_intelligent/workspace/blender_stage/scene_submission_final_preview.mp4)
-
-### 2. 报告与核对表
-
-- 最终详细报告：
-  [final_submission_report.md](file:///D:/space_intelligent/docs/final_submission_report.md)
-- 严格提交版 LaTeX 报告源：
-  `docs/final_submission_report_strict.tex`
-- 合格性核对表：
-  [final_acceptance_audit.md](file:///D:/space_intelligent/docs/final_acceptance_audit.md)
-- 超参数与指标表：
-  `docs/submission_hparams_metrics.md`
-- 权重清单：
-  `docs/model_weights_manifest.md`
 
 ## 重要说明
 
 - A 和背景的原始结果属于 3DGS / 点云表达，不适合直接作为 Blender 最终渲染输入。
 - 因此最终融合阶段采用了“保留原始结果 + 派生 Blender 友好表达”的工程路线。
 - C 当前最终导出是 geometry OBJ，最终显示依赖 Blender 材质补充。
-- 当前仓库已经补齐本地提交材料，但以下两项仍需你本人在最终提交前完成：
-  - 回填 Public GitHub 仓库链接
-  - 回填云端模型权重分享链接和提取码
-
-## 引用
-
-如用于课程作业提交，建议同时附上：
-
-- 最终 PDF 报告
-- 最终视频
-- 最终 Blender 场景
-- 模型权重下载链接
