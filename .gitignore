@@ -1,0 +1,146 @@
+# =========================
+# OS / Editor
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+workspace/blender_stage/scene_assembly_*.*
+workspace/blender_stage/scene_submission_final_preview.*
+# =========================
+# Python
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# =========================
+# Logs / Temp
+# =========================
+*.log
+*.tmp
+*.temp
+*.out
+*.err
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# LaTeX build artifacts
+# =========================
+*.aux
+*.fdb_latexmk
+*.fls
+*.toc
+*.synctex.gz
+*.bbl
+*.blg
+*.lof
+*.lot
+
+# =========================
+# Blender
+# =========================
+*.blend1
+*.blend2
+
+# Preview frame dumps
+*_frames/
+*_preview_frames/
+tmp/
+
+# Common generated text outputs
+*.txt
+
+# =========================
+# Large training outputs
+# =========================
+outputs/**
+!outputs/.gitkeep
+
+# If you want to keep some lightweight docs under outputs, add exceptions here:
+# !outputs/some_small_file.txt
+
+# =========================
+# External repositories
+# =========================
+external/**
+!external/.gitkeep
+
+# =========================
+# Data files
+# =========================
+data/**
+!data/.gitkeep
+
+# =========================
+# Model weights / checkpoints / assets
+# =========================
+*.ckpt
+*.pth
+*.pt
+*.bin
+*.safetensors
+*.onnx
+
+*.ply
+*.obj
+*.mtl
+*.fbx
+*.glb
+*.gltf
+*.abc
+
+# Large media
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz
+
+# Images generated during experiments
+*.exr
+
+# =========================
+# Keep submission docs and scripts
+# =========================
+!README.md
+!environment.yml
+!configs/**
+!scripts/**
+!docs/**
+!workspace/blender_stage/*.py
+!workspace/blender_stage/*.md
+
+# Ignore generated Blender stage artifacts by default
+workspace/blender_stage/*.blend
+workspace/blender_stage/*.png
+workspace/blender_stage/*.mp4
+workspace/blender_stage/*.txt
+workspace/blender_stage/*_frames/
+workspace/blender_stage/*_preview_frames/
+
+# Keep final showcase image on GitHub if desired
+!workspace/blender_stage/scene_submission_final.png
+
+# If you also want to keep final video/blend on GitHub, uncomment:
+# !workspace/blender_stage/scene_submission_final_preview.mp4
+# !workspace/blender_stage/scene_submission_final.blend

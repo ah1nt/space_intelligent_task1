@@ -1,0 +1,91 @@
+{
+  "project_root": "D:/space_intelligent",
+  "env": {
+    "conda_env": "nedge"
+  },
+  "tools": {
+    "python": "D:/Anaconda/envs/nedge/python.exe",
+    "ffmpeg": "C:/Users/Administration/AppData/Local/Microsoft/WinGet/Packages/Gyan.FFmpeg.Essentials_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-8.1.1-essentials_build/bin/ffmpeg.exe",
+    "colmap": "D:/space_intelligent/external/colmap-4.0.4/bin/colmap.exe"
+  },
+  "repos": {
+    "gaussian_splatting": "D:/space_intelligent/external/gaussian-splatting-win",
+    "threestudio": "D:/space_intelligent/external/threestudio",
+    "zero123": ""
+  },
+  "object_a": {
+    "video_path": "D:/space_intelligent/data/object_a/raw_video/VID_20260617_013308.mp4",
+    "image_dir": "",
+    "morph": "gs_w",
+    "frame_step": 4,
+    "camera_model": "OPENCV",
+    "matcher": "sequential"
+  },
+  "object_b": {
+    "prompt": "a cute toy robot, white ceramic body, round head, two glowing blue eyes, simple silhouette, centered, studio lighting",
+    "threestudio_config": "configs/dreamfusion-sd.yaml",
+    "workspace_name": "object_b_text3d",
+    "launch_args": [
+      "--gpu",
+      "0",
+      "data.width=128",
+      "data.height=128",
+      "data.batch_size=1",
+      "trainer.max_steps=3000",
+      "trainer.val_check_interval=500",
+      "checkpoint.every_n_train_steps=1000",
+      "system.background.random_aug=true",
+      "system.material.ambient_only_steps=400",
+      "system.prompt_processor.pretrained_model_name_or_path=D:/space_intelligent/external/threestudio/load/stable-diffusion-2-base",
+      "system.guidance.pretrained_model_name_or_path=D:/space_intelligent/external/threestudio/load/stable-diffusion-2-base"
+    ]
+  },
+  "object_c": {
+    "image_path": "D:/space_intelligent/data/object_c/raw_image/IMG_20260617_013342.jpg",
+    "foreground_image_path": "D:/space_intelligent/data/object_c/prepared/foreground.png",
+    "mask_path": "",
+    "threestudio_zero123_config": "configs/zero123.yaml",
+    "workspace_name": "object_c_zero123"
+  },
+  "background": {
+    "scene_name": "garden",
+    "scene_path": "D:/space_intelligent/data/background/garden",
+    "workspace_name": "background_3dgs_low_resource",
+    "launch_args": [
+      "--images",
+      "images_8",
+      "--resolution",
+      "8",
+      "--data_device",
+      "cpu",
+      "--limit",
+      "96",
+      "--iterations",
+      "5000",
+      "--save_iterations",
+      "1000",
+      "3000",
+      "5000",
+      "--test_iterations",
+      "1000",
+      "3000",
+      "5000",
+      "--checkpoint_iterations",
+      "5000",
+      "--densify_from_iter",
+      "200",
+      "--densify_until_iter",
+      "2000",
+      "--densification_interval",
+      "200",
+      "--opacity_reset_interval",
+      "1000",
+      "--init_point_limit",
+      "10000"
+    ]
+  },
+  "fusion": {
+    "strategy": "mesh_then_blender",
+    "notes": "将 A/B/C 输出统一导出为 mesh 或点云后，再进入 Blender 或 Gaussian 表达。"
+  }
+}
